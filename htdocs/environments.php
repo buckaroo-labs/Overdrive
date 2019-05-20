@@ -1,3 +1,14 @@
+<style>
+ul.pagination li {
+   display: inline;
+   }
+   
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
 <script src="Hydrogen/sorttable.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
@@ -38,7 +49,7 @@ $(document).ready(function(){
 //The following three lines provide the variables that incTemplate.php will use to create the page header, menu, and sidebar
 $pagetitle="Environment directory";
 $headline='<h1>Environment directory</h1><button id="ToggleHelp">Show/hide help</button>';
-$top_help_text='<h2>Help for this page:</h2><p>Click on the server icon in the left-hand column to see a list of servers associated with each environment. Click on filter icons (<img src="images/filter_on.jpg" alt="filter icon">) next to the application name to filter.</p>';
+$top_help_text='<h2>Help for this page:</h2><p>Click on the service icon in the left-hand column to see a list of services associated with each environment. Click on filter icons (<img src="images/filter-on.png" height="24" alt="filter icon">) next to the application name to filter.</p>';
 include ('Hydrogen/pgTemplate.php');
 
 ?>
@@ -47,6 +58,12 @@ include ('Hydrogen/pgTemplate.php');
 
 <div>
 </div>
+<div>
+<div class="w3-main w3-container w3-padding-16" id="top_help">
+<p><?php echo $top_help_text; ?></p>
+</div>
+</div>
+
 <?php include 'Hydrogen/elemLogoHeadline.php';  	 ?>
 
 <?php

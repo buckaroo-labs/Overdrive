@@ -1,3 +1,14 @@
+<style>
+ul.pagination li {
+   display: inline;
+   }
+   
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
 <script src="Hydrogen/sorttable.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 
@@ -80,6 +91,11 @@ include ('Hydrogen/pgTemplate.php');
 
 
 <div>
+</div>
+<div>
+<div class="w3-main w3-container w3-padding-16" id="top_help">
+<p><?php echo $top_help_text; ?></p>
+</div>
 </div>
 <?php include 'Hydrogen/elemLogoHeadline.php';  	
 

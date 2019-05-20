@@ -1,3 +1,14 @@
+<style>
+ul.pagination li {
+   display: inline;
+   }
+   
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
 <script src="Hydrogen/sorttable.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
@@ -24,16 +35,23 @@ $(document).ready(function(){
 //The following four lines provide the variables that pgTemplate.php will use to create the page header, menu, and sidebar
 $pagetitle="Application directory";
 $headline='<h1>Application directory</h1><button id="ToggleHelp">Show/hide help</button>';
-$top_help_text='<h2>Help for this page:</h2><p>Click on the server icon in the left-hand column to see a list of servers associated with each application.';
-$top_help_text=$top_help_text . 'Click on the next icon in the second column to see the environments for each application. Click on the index card (<img src="images/index_card.jpg" alt="index card">) next to the APP ID to see the application page in the company&rsquo;s master application registry.</p>';
+$top_help_text='<h2>Help for this page:</h2><p>Click on the service icon in the left-hand column to see a list of services associated with each application.';
+$top_help_text=$top_help_text . 'Click on the next icon in the second column to see the environments for each application. Click on the clipboard (<img src="images/doc.png" alt="clipboard">) next to the APP ID to see the application page in the company&rsquo;s master application registry.</p>';
 include ('Hydrogen/pgTemplate.php');
 
 ?>
 
-<div id="main" class="w3-main w3-container w3-padding-16" style="margin-left:250px">
 
+
+<div id="main" class="w3-main w3-container w3-padding-16" style="margin-left:250px">
 <div>
 </div>
+<div>
+<div class="w3-main w3-container w3-padding-16" id="top_help">
+<p><?php echo $top_help_text; ?></p>
+</div>
+</div>
+
 <?php include 'Hydrogen/elemLogoHeadline.php';  	 ?>
 
 <?php

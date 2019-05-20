@@ -1,3 +1,14 @@
+<style>
+ul.pagination li {
+   display: inline;
+   }
+   
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+</style>
 <script src="Hydrogen/sorttable.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script>
@@ -74,8 +85,8 @@ $(document).ready(function(){
 //The following four lines provide the variables that incTemplate.php will use to create the page header, menu, and sidebar
 $pagetitle="Database directory";
 $headline='<h1>Database directory</h1><button id="ToggleHelp">Show/hide help</button>';
-$top_help_text='<h2>Help for this page:</h2><p>Click on the index card (<img src="images/index_card.jpg" alt="index card">) next to the hostname to look up host details on another site on the AT&T intranet.</p> <p>To use the ssh hyperlinks (<img src="images/ssh-icon.png" alt="ssh link">) below, you will of course need to have an ssh client. If you are on a Windows desktop, you will need to register that client as the handler for ssh hyperlinks. Likewise, you will need to configure your PC to use the SQL*Plus links below. <a href="help.php"> See instructions here</a>. </p>';
-$top_help_text=$top_help_text . '<p>There are a limited number of ways to filter results. This can be done either by manually editing the URL in your address bar or by clicking filter icons (<img src="images/filter_on.jpg" alt="filter icon">) in the table below.';
+$top_help_text='<h2>Help for this page:</h2><p>To use the ssh hyperlinks (<img src="images/ssh-icon.png" alt="ssh link">) below, you will of course need to have an ssh client. If you are on a Windows desktop, you will need to register that client as the handler for ssh hyperlinks. Likewise, you will need to configure your PC to use the SQL*Plus links below. <a href="help.php"> See instructions here</a>. </p>';
+$top_help_text=$top_help_text . '<p>There are a limited number of ways to filter results. This can be done either by manually editing the URL in your address bar or by clicking filter icons (<img src="images/filter-on.png" height="24" alt="filter icon">) in the table below.';
 include ('Hydrogen/pgTemplate.php');
 ?>
 
@@ -83,6 +94,11 @@ include ('Hydrogen/pgTemplate.php');
 
 
 <div>
+</div>
+<div>
+<div class="w3-main w3-container w3-padding-16" id="top_help">
+<p><?php echo $top_help_text; ?></p>
+</div>
 </div>
 <?php include 'Hydrogen/elemLogoHeadline.php';  	
 

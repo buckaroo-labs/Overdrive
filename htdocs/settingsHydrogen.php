@@ -1,5 +1,5 @@
 <?php
-
+$hideSearchForm=true;
 $logo_image="images/compass-sm.png";
 
 $navbar_links[0]=array("name"=>'<img src="images/compass-sm.png" height="20">',"href"=>"index.php","class"=>"w3-theme-l1");
