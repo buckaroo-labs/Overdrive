@@ -11,8 +11,8 @@ $sidebar_links[1]=array("name"=>'<img src="images/lb.png" alt="(icon)"> Environm
 $sidebar_links[2]=array("name"=>'<img src="images/service.png" alt="(server icon)"> Services',"href"=>"services.php","class"=>"w3-hover-black");
 $sidebar_links[3]=array("name"=>'<img src="images/db.png" alt="(db icon)"> Databases',"href"=>"databases.php","class"=>"w3-hover-black");
 //$sidebar_links[4]=array("name"=>'<img src="images/server.png" alt="(server icon)"> Hosts',"href"=>"hosts.php","class"=>"w3-hover-black");
-$footer_text="This page was generated at " . date("Y-m-d H:i:s");
-
+//$footer_text="This page was generated at " . date("Y-m-d H:i:s");
+$footer_text='See source code on <a href="https://github.com/ke7ijo/Compass">GitHub</a>';
 define ("DEFAULT_DB_TYPE","mysql"); 	// set default database type
 define ("DEFAULT_DB_USER","gold_app"); 	// set default database user
 define ("DEFAULT_DB_HOST","localhost"); // set default database host
