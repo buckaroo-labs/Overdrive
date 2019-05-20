@@ -6,5 +6,4 @@ This application was developed for a production support team responsible for hun
 
 The application is being redesigned on the Hydrogen framework (see my repository of the same name) and migrated to a MySQL back end from the original Oracle design. Some of the original features (e.g. user authentication, multiple support teams, and asset search) have yet to be restored or replaced.
 
-
-
+Developed on PHP version 7.1.2 and Hydrogen v0.5
