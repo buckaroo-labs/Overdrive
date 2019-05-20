@@ -98,9 +98,9 @@ if ($page_count>0) {
 	}
 	$address_classes[0]='Filter';
 
-	$linkURLs[4] = 'services.php?app_id='; 
+	$linkURLs[4] = 'services.php?env_id='; 
 	$address_classes[4]='Services';	
-	$linkURLs[5] = 'databases.php?app_id=';
+	$linkURLs[5] = 'databases.php?env_id=';
 	$address_classes[5]='Databases';	
 	$table=new HTMLTable($dds->getFieldNames(),$dds->getFieldTypes());
 	$table->defineRows($linkURLs,$keycols,$invisible,$address_classes,$linkTargets);
