@@ -6,7 +6,7 @@ $(document).ready(function(){
   $(".nextlink").html('<img src="images/next.png" height="16">');
   $(".prevlink").html('<img src="images/prev.png" height="16">');
   
-  $(".AppDetails").html('<img src="images/index_card.jpg" height="24">');
+  $(".AppDetails").html('<img src="images/doc.png" height="24">');
   $(".Environments").html('<img src="images/lb.png" height="24">');
   $(".Services").html('<img src="images/service.png" height="24">');
   $(".Databases").html('<img src="images/db.png" height="24">');

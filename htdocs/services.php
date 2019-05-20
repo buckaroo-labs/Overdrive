@@ -16,9 +16,9 @@ $(document).ready(function(){
 	echo "'<img";
 	
 	if(isset($_GET['app_id'])) {
-	  echo ' src="images/filter_rm.jpg" ';
+	  echo ' src="images/filter-off.png" ';
 	} else {
-	  echo ' src="images/filter_on.jpg" ';
+	  echo ' src="images/filter-on.png" ';
 	}
 	
 	echo 'height="24"';
@@ -31,9 +31,9 @@ $(document).ready(function(){
 	echo "'<img";
 	
 	if(isset($_GET['envid'])) {
-	  echo ' src="images/filter_rm.jpg" ';
+	  echo ' src="images/filter-off.png" ';
 	} else {
-	  echo ' src="images/filter_on.jpg" ';
+	  echo ' src="images/filter-on.png" ';
 	}
 	
 	echo 'height="24"';
@@ -46,9 +46,9 @@ $(document).ready(function(){
 	echo "'<img";
 	
 	if(isset($_GET['servicetype'])) {
-	  echo ' src="images/filter_rm.jpg" ';
+	  echo ' src="images/filter-off.png" ';
 	} else {
-	  echo ' src="images/filter_on.jpg" ';
+	  echo ' src="images/filter-on.png" ';
 	}
 	
 	echo 'height="24"';
