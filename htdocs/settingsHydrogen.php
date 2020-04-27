@@ -23,10 +23,9 @@ define ("DEFAULT_MAX_RECS",50);
 //define ("DEFAULT_DB_PASS","xxxxxxxxxxx"); // set default database password
 require_once 'settingsPasswords.php';
 
-define ("DATAFILE_PATH","D:\Code\LAMP\Gold\htdocs");
-define ("WEBROOT","D:\Code\LAMP\Gold\htdocs");
+define ("DATAFILE_PATH","C:\Bitnami\wampstack-7.2.29-2\apps\Compass\htdocs");
+define ("WEBROOT","C:\Bitnami\wampstack-7.2.29-2\apps\Compass\htdocs");
 define ("DEBUG",true);
-define ("DEBUG_PATH","D:\Code\LAMP\Gold\htdocs\debug.txt");
 
 $hideLoginStatus=true;
 $hideSearchForm=true;

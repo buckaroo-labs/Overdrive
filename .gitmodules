@@ -1,0 +1,3 @@
+[submodule "htdocs/Hydrogen"]
+	path = htdocs/Hydrogen
+	url = https://github.com/Heiner-ziply/Hydrogen
