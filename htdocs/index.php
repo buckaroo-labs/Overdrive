@@ -9,7 +9,11 @@ include ('Hydrogen/pgTemplate.php');
 <div id="main" class="w3-main w3-container w3-padding-16" style="margin-left:250px">
 <div>
 </div>
-<?php include 'Hydrogen/elemLogoHeadline.php';  	 ?>
+<?php include 'Hydrogen/elemLogoHeadline.php';  
+
+error_log ("DEBUG set to " . $settings['DEBUG'] . "; DEBUG_PATH=".$settings['DEBUG_PATH']);
+
+?>
 
 <p>This application is for viewing and navigating IT infrastructure data.</p>
 
@@ -38,6 +42,10 @@ include ('Hydrogen/pgTemplate.php');
 <!-- END MAIN -->
 </div>
 <?php include "Hydrogen/elemNavbar.php"; ?>
-<?php include "Hydrogen/elemFooter.php"; ?>
+<?php include "Hydrogen/elemFooter.php"; 
+
+
+
+?>
 </body></html>
 

@@ -19,8 +19,16 @@ define ("DEFAULT_DB_HOST","localhost"); // set default database host
 define ("DEFAULT_DB_PORT","1521"); 	// set default database port
 define ("DEFAULT_DB_INST","gold"); 		// set default database name/instance/schema
 define ("DEFAULT_MAX_RECS",50);
+
+$settings['DEFAULT_DB_TYPE'] = "mysql";
+$settings['DEFAULT_DB_USER'] = "gold_app";
+$settings['DEFAULT_DB_HOST'] = "localhost";
+$settings['DEFAULT_DB_INST'] = "gold";
+$settings['DEFAULT_DB_MAXRECS'] = 50;
+
+
 //This has been moved to a separate file ignored by git: settingsPasswords.php
-//define ("DEFAULT_DB_PASS","xxxxxxxxxxx"); // set default database password
+//$settings['DEFAULT_DB_PASS'] ="xxxxxxxxxxx"; // set default database password
 require_once 'settingsPasswords.php';
 
 define ("DATAFILE_PATH","C:\Bitnami\wampstack-7.2.29-2\apps\Compass\htdocs");
