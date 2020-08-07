@@ -6,7 +6,6 @@ $top_help_text="";
 include ('Hydrogen/pgTemplate.php');
 ?>
 
-
 <div id="main" class="w3-main w3-container w3-padding-16" style="margin-left:250px">
 <div>
 </div>
@@ -38,7 +37,7 @@ include ('Hydrogen/pgTemplate.php');
 
 <!-- END MAIN -->
 </div>
-
+<?php include "Hydrogen/elemNavbar.php"; ?>
 <?php include "Hydrogen/elemFooter.php"; ?>
 </body></html>
 
