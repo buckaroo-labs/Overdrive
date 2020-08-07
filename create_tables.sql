@@ -186,7 +186,6 @@ where ifnull(s.status,'ACTIVE')='ACTIVE';
  where ifnull(s.status,'ACTIVE')='ACTIVE'
  and s.service_type='Database';
 
-
-
-grant select on gold.* to  'gold_app' identified by 'infrastuKcture';
-grant insert on gold.page_usage to  'gold_app' ;
+create USER 'gold_app'@'localhost' IDENTIFIED WITH mysql_native_password BY 'infrastuKcture';  
+grant select on gold.* to  'gold_app'@'localhost';
+grant insert on gold.page_usage to  'gold_app'@'localhost' ;
