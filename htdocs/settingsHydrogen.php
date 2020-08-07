@@ -25,8 +25,8 @@ require_once 'settingsPasswords.php';
 
 define ("DATAFILE_PATH","C:\Bitnami\wampstack-7.2.29-2\apps\Compass\htdocs");
 define ("WEBROOT","C:\Bitnami\wampstack-7.2.29-2\apps\Compass\htdocs");
-define ("DEBUG",true);
 
+$settings['DEBUG']=true;
 $hideLoginStatus=true;
 $hideSearchForm=true;
 $settings['search_page']="index.php";
