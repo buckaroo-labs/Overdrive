@@ -1,0 +1,215 @@
+body {
+    background-color: #FFF6E5;
+    margin-left: 20px;
+    font-size: 100%;
+        }
+    
+h1 {
+    color: #1122AA;
+    font-family: Verdana, Geneva, sans-serif;}
+
+h2 {
+    color: #1122AA;
+    font-family: Verdana, Geneva, sans-serif;}
+    
+p {
+    font-family: Verdana, Geneva, sans-serif;}
+
+.desc {
+    font-family: Verdana, Geneva, sans-serif;
+}
+
+/* unvisited link */
+a:link {    font-family: Verdana, Geneva, sans-serif;    color: #BB4E1C;}
+
+/* visited link */
+a:visited {    font-family: Verdana, Geneva, sans-serif;    color: #3333EE;}
+
+/* mouse over link */
+a:hover {    font-family: Verdana, Geneva, sans-serif;    color: #FF0000;}
+
+/* selected link */
+a:active {    font-family: Verdana, Geneva, sans-serif;    color: #FF0000;}
+
+#logo {float: left;    margin-right: 30px;}
+
+#sidebar {
+	margin-top: 20px;
+	margin-left: 17px;	
+	margin-bottom: 10px;
+	float: left;
+	text-align: center;
+	font-size: 0.8em;
+	max-width: 140px;
+	background-color: #DDDDf5;
+}
+
+.sidebar_item {
+    margin-top: 10px;
+    margin-left: 8px;
+    margin-right: 8px;
+    margin-bottom: 20px;
+    
+}
+
+
+
+#footer {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 250px;
+}
+
+div {
+	font-family: Verdana, Geneva, sans-serif;
+}
+
+#main {
+    margin-top: 40px;
+    margin-bottom: 60px;
+    margin-right: 75px;
+    margin-left: 200px;
+    }
+
+table.statusbar { background-color: #3333EE; width: 100%;     }
+
+ul.statusbar {    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;}
+
+li.statusbar {
+    color: #FFFF66;
+    background-color: #3333EE;
+    text-decoration: none;
+    float: right;
+    display: inline;
+}
+
+
+table.menubar { background-color: #DDDDEE; width: 100%;}
+    
+a.menubar_item:link, a.menubar_item:visited {
+    display: block;
+    width: 120px;
+    font-weight: bold;
+    color: #3333DD;
+    background-color: #DDDDEE;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a.menubar_item:hover, a.menubar_item:active {
+    background-color: #EEEEFF;
+}   
+
+.sidebar_item:hover, a.menubar_item:active {
+    background-color: #EEEEFF;
+}   
+
+
+ul.menubar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+li.menubar {    float: left;}
+
+
+table.footer { background-color: #DDDDEE; width: 100%;}
+ul.footer {list-style-type: none;}
+
+a.footer_item:link, a.footer_item:visited {
+    display: block;
+    color: #3333DD;
+    background-color: #DDDDEE;
+    text-align: center;
+    padding: 4px;
+    text-decoration: none;
+}
+
+a.footer_item:hover, a.footer_item:active {
+    background-color: #EEEEFF;
+} 
+
+td.icon {
+    text-align: center;
+}
+
+table.sidebar_title {
+    color: #FFFF66;
+    background-color: #3333EE;
+}
+
+table.sidebar_title td{  
+font-family: Verdana, Geneva, sans-serif;  
+     font-size: 0.9em;
+        text-align: center;
+}
+
+table.crawler td{  font-family: Verdana, Geneva, sans-serif;  }
+
+table.ext_link_icon_table td {  
+	font-size: 0.8em;
+       border: 1px solid black; 
+       border-collapse: collapse;
+}
+
+table.sortable td {
+	padding: 2px;
+	font-size: 0.8em;
+}
+
+table.sortable th {
+    color: #FFFF66;
+    background-color: #3333EE;
+    padding: 8px;
+     font-size: 0.9em;
+}
+
+table.sortable tbody tr:nth-child(2n+1) td {
+  background: #CCDDEE;
+}
+table.sortable tbody tr:nth-child(2n) td {
+  background: #AABBCC;
+}
+
+ul.pagination li {
+   display: inline;
+   }
+   
+ul.pagination {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    color: #FFFF66;
+    background-color: #3333EE;
+}
+
+#top_help {
+    align:top;
+    margin:20px;
+    font-size: 80%;
+ }
+ 
+ #logo {
+ 	align:top;
+ 	margin: 10px;
+ }
+ 
+ .top_text {
+ 	align:left;
+ }
+ 
+ .logo_title {
+ 	width:100%;
+} 	
+
+.l_h_text {
+	float:left;
+	}
