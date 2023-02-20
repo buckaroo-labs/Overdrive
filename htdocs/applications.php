@@ -86,7 +86,9 @@ if ($page_count>0) {
 	$linkTargets=null;
 	$keycols=null;
 	$invisible=null;
-	$linkURLs[2] = 'http://it.greatbighugecompany.com/app_registry/detail.cfm?id=';
+	//put your organization's page link here
+	//$linkURLs[2] = 'http://it.greatbighugecompany.com/app_registry/detail.cfm?id=';
+	$linkURLs[2] = 'application.php?id=';
 	$address_classes[2]='AppDetails';
 	$linkURLs[3] = 'environments.php?app_id=';
 	$address_classes[3]='Environments';	
