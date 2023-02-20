@@ -102,16 +102,21 @@ include ('Hydrogen/pgTemplate.php');
 </div>
 <?php include 'Hydrogen/elemLogoHeadline.php';  	
 
-$sql="select URL as '(URL)', servicename as 'Database', server_brand as '(RDBMS)', server_brand as 'Brand', concat(hostname,'.',domain) as '(ssh)', concat(hostname,'.',domain) as 'Hostname', env_id as '(env)', env_name as'Environment', app_id as '(app)', app_name as 'Application'";
-$sql=$sql . " from database_directory where 1=1 ";
+
+
+$sql="select (case when (`s`.`SERVER_BRAND` = 'Oracle') then concat('orcl://',ifnull(`s`.`ORACLENET_FQDN`,concat(`h`.`HOSTNAME`,'.',`h`.`DOMAIN`)),(case when isnull(`s`.`PORT`) then '' else concat(':',`s`.`PORT`,'/',ifnull(`s`.`SVC_CLUSTER`,`s`.`SERVICENAME`)) end)) else '' end)  as '(URL)', s.servicename as 'Database', server_brand as '(RDBMS)', server_brand as 'Brand', concat(h.hostname,'.',h.domain) as '(ssh)', concat(h.hostname,'.',h.domain) as 'Hostname', e.env_id as '(env)', env_name as'Environment', a.app_id as '(app)', app_name as 'Application'";
+
+$sql=$sql . " from ((((`service` `s` left join `host` `h` on((`s`.`HOST_MACHINE` = `h`.`HOSTNAME`))) left join `m_env_service` `m` on((`s`.`SERVICENAME` = `m`.`SERVICENAME`))) left join `environment` `e` on((`m`.`ENV_ID` = `e`.`ENV_ID`))) left join `application` `a` on((`e`.`APP_ID` = `a`.`APP_ID`))) where ((ifnull(`s`.`STATUS`,'ACTIVE') = 'ACTIVE') and (`s`.`SERVICE_TYPE` = 'Database')) ";
 
 if (isset($_GET['brand'])) $sql=$sql . " and upper(server_brand)=upper('" . $stateVar['brand'] . "')";
-if (isset($_GET['app_id'])) $sql=$sql . " and app_id =" . $stateVar['app_id'] ;
-if (isset($_GET['envid'])) $sql=$sql . " and env_id =" . $stateVar['envid'] ;
+if (isset($_GET['app_id'])) $sql=$sql . " and a.app_id =" . $stateVar['app_id'] ;
+if (isset($_GET['envid'])) $sql=$sql . " and e.env_id =" . $stateVar['envid'] ;
 if (isset($_GET['sort'])) {$sql=$sql . " order by app_name, env_name, server_brand";
 } else {
-$sql=$sql . " order by lower(servicename)";
+$sql=$sql . " order by lower(s.servicename)";
 }
+
+
 
 paginate($dds,$page_num);
 $result = $dds->setMaxRecs(30);
