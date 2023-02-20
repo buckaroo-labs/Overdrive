@@ -99,16 +99,23 @@ include ('Hydrogen/pgTemplate.php');
 </div>
 <?php include 'Hydrogen/elemLogoHeadline.php';  	
 
-$sql="select concat(hostname,'.',domain) as 'Hostname', concat(hostname,'.',domain) as ssh, os as 'OS', servicename as 'Service', service_type as '(st)', service_type as 'Svc Type',  env_id as '(env)', env_name as 'Env Name', app_id as '(app)', app_name as 'App Name'";
-$sql=$sql . " from server_directory where 1=1 ";
+
+$sql="select concat(h.hostname,'.',h.domain) as 'Hostname', concat(h.hostname,'.',h.domain) as ssh, os as 'OS', s.servicename as 'Service', service_type as '(st)', service_type as 'Svc Type',  e.env_id as '(env)', env_name as 'Env Name', a.app_id as '(app)', a.app_name as 'App Name'";
+//$sql=$sql . " from server_directory where 1=1 ";
+$sql=$sql . " from ((((`service` `s`
+left join `host` `h` on((`s`.`HOST_MACHINE` = `h`.`HOSTNAME`)))
+left join `m_env_service` `m` on((`s`.`SERVICENAME` = `m`.`SERVICENAME`)))
+left join `environment` `e` on((`m`.`ENV_ID` = `e`.`ENV_ID`)))
+left join `application` `a` on((`e`.`APP_ID` = `a`.`APP_ID`)))
+where (ifnull(`s`.`STATUS`,'ACTIVE') = 'ACTIVE') ";
 
 if (isset($_GET['servicetype'])) $sql=$sql . " and upper(service_type)=upper('" . $stateVar['servicetype'] . "')";
-if (isset($_GET['app_id'])) $sql=$sql . " and app_id =" . $stateVar['app_id'] ;
-if (isset($_GET['envid'])) $sql=$sql . " and env_id =" . $stateVar['envid'] ;
-if (isset($GET['q'])) $sql=$sql . " and (upper(servicename) like upper('%" . $stateVar['q'] . "%') " . " or upper(hostname) like upper('%" . $stateVar['q'] . "%') )";
+if (isset($_GET['app_id'])) $sql=$sql . " and a.app_id =" . $stateVar['app_id'] ;
+if (isset($_GET['envid'])) $sql=$sql . " and e.env_id =" . $stateVar['envid'] ;
+if (isset($GET['q'])) $sql=$sql . " and (upper(servicename) like upper('%" . $stateVar['q'] . "%') " . " or upper(h.hostname) like upper('%" . $stateVar['q'] . "%') )";
 if (isset($GET['sort'])) {$sql=$sql . " order by app_name, env_name, service_type";
 } else {
-$sql=$sql . " order by hostname";
+$sql=$sql . " order by h.hostname";
 }
 
 
