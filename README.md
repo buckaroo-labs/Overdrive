@@ -8,4 +8,4 @@ The application is being redesigned on the Hydrogen framework (see my repository
 
 Developed on PHP version 7.1.2 and Hydrogen v0.5
 
-See a demo at: http://www.monstro.us/Compass
+See a demo at: http://compass.monstro.us
