@@ -1,7 +1,7 @@
 <?php
 //The following three lines provide the variables that incTemplate.php will use to create the page header, menu, and sidebar
-$pagetitle="Home | Compass";
-$headline = '<h1>Compass</h1><h3>Environment Navigator</h3>' ;
+$pagetitle="Home | Overdrive";
+$headline = '<h1>Overdrive</h1><h3>Environment Navigator</h3>' ;
 $top_help_text="";
 include ('Hydrogen/pgTemplate.php');
 ?>
