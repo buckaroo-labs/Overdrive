@@ -2,7 +2,7 @@
 $hideSearchForm=true;
 $logo_image="images/overdrive-sm.png";
 
-$navbar_links[0]=array("name"=>'<img src="images/overdrive-sm.png" height="20">',"href"=>"index.php","class"=>"w3-theme-l1");
+$navbar_links[0]=array("name"=>'<img src="images/overdrive-sm.png" height="20">',"href"=>"index.php","class"=>"w3-theme-l1 " . $settings['color2']);
 $navbar_links[1]=array("name"=>"Home","href"=>"index.php","class"=>"w3-hide-small w3-hover-white");
 $navbar_links[2]=array("name"=>"Help","href"=>"help.php","class"=>"w3-hide-small w3-hover-white");
 
