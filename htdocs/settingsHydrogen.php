@@ -13,14 +13,17 @@ $sidebar_links[3]=array("name"=>'<img src="images/db.png" alt="(db icon)"> Datab
 //$sidebar_links[4]=array("name"=>'<img src="images/server.png" alt="(server icon)"> Hosts',"href"=>"hosts.php","class"=>"w3-hover-black");
 //$footer_text="This page was generated at " . date("Y-m-d H:i:s");
 $footer_text='See source code on <a href="https://github.com/buckaroo-labs/Overdrive">GitHub</a>';
-define ("DEFAULT_DB_TYPE","mysql"); 	// set default database type
-define ("DEFAULT_DB_HOST","localhost"); // set default database host
-define ("DEFAULT_DB_PORT","1521"); 	// set default database port (not used by MySQL)
-define ("DEFAULT_MAX_RECS",50);
+
+
+$settings['DEFAULT_DB_TYPE'] = "mysql"; // set default database type
+$settings['DEFAULT_DB_PORT'] = "1521"; // set default database port (not used by MySQL)
+$settings['DEFAULT_DB_HOST'] = "localhost"; // set default database host
+$settings['DEFAULT_DB_MAXRECS'] = 150;
 //This has been moved to a separate file ignored by git: settingsPasswords.php
-//define ("DEFAULT_DB_PASS","xxxxxxxxxxx"); // set default database password
-//define ("DEFAULT_DB_USER","gold_app"); 	// set default database user
-//define ("DEFAULT_DB_INST","gold"); 		// set default database name/instance/schema
+//$settings['DEFAULT_DB_USER'] = "scott"; // set default database user
+//$settings['DEFAULT_DB_PASS'] = "tiger";  // set default database password
+//$settings['DEFAULT_DB_INST'] = "XE"; // set default database name/instance/schema
+
 require_once 'settingsPasswords.php';
 
 define ("DATAFILE_PATH",dirname(__FILE__));
