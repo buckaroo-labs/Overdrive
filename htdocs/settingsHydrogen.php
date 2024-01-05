@@ -34,6 +34,9 @@ define ("DEBUG_PATH",dirname(__FILE__) . "/debug.txt");
 $hideLoginStatus=true;
 $hideSearchForm=true;
 $settings['search_page']="index.php";
+
+$settings['head_content']='';
+
 $stateVarList=array('app_id','envid','servicetype','brand');
 
 require_once ('Hydrogen/libDebug.php');
