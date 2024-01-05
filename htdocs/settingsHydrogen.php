@@ -1,8 +1,8 @@
 <?php
 $hideSearchForm=true;
-$logo_image="images/compass-sm.png";
+$logo_image="images/overdrive-sm.png";
 
-$navbar_links[0]=array("name"=>'<img src="images/compass-sm.png" height="20">',"href"=>"index.php","class"=>"w3-theme-l1");
+$navbar_links[0]=array("name"=>'<img src="images/overdrive-sm.png" height="20">',"href"=>"index.php","class"=>"w3-theme-l1");
 $navbar_links[1]=array("name"=>"Home","href"=>"index.php","class"=>"w3-hide-small w3-hover-white");
 $navbar_links[2]=array("name"=>"Help","href"=>"help.php","class"=>"w3-hide-small w3-hover-white");
 
@@ -12,21 +12,21 @@ $sidebar_links[2]=array("name"=>'<img src="images/service.png" alt="(server icon
 $sidebar_links[3]=array("name"=>'<img src="images/db.png" alt="(db icon)"> Databases',"href"=>"databases.php","class"=>"w3-hover-black");
 //$sidebar_links[4]=array("name"=>'<img src="images/server.png" alt="(server icon)"> Hosts',"href"=>"hosts.php","class"=>"w3-hover-black");
 //$footer_text="This page was generated at " . date("Y-m-d H:i:s");
-$footer_text='See source code on <a href="https://github.com/buckaroo-labs/Compass">GitHub</a>';
+$footer_text='See source code on <a href="https://github.com/buckaroo-labs/Overdrive">GitHub</a>';
 define ("DEFAULT_DB_TYPE","mysql"); 	// set default database type
-define ("DEFAULT_DB_USER","gold_app"); 	// set default database user
 define ("DEFAULT_DB_HOST","localhost"); // set default database host
-define ("DEFAULT_DB_PORT","1521"); 	// set default database port
-define ("DEFAULT_DB_INST","gold"); 		// set default database name/instance/schema
+define ("DEFAULT_DB_PORT","1521"); 	// set default database port (not used by MySQL)
 define ("DEFAULT_MAX_RECS",50);
 //This has been moved to a separate file ignored by git: settingsPasswords.php
 //define ("DEFAULT_DB_PASS","xxxxxxxxxxx"); // set default database password
+//define ("DEFAULT_DB_USER","gold_app"); 	// set default database user
+//define ("DEFAULT_DB_INST","gold"); 		// set default database name/instance/schema
 require_once 'settingsPasswords.php';
 
-define ("DATAFILE_PATH","D:\Code\LAMP\Compass\htdocs");
-define ("WEBROOT","D:\Code\LAMP\Compass\htdocs");
+define ("DATAFILE_PATH",dirname(__FILE__));
+define ("WEBROOT",dirname(__FILE__));
 define ("DEBUG",true);
-define ("DEBUG_PATH","D:\Code\LAMP\Compass\htdocs\debug.txt");
+define ("DEBUG_PATH",dirname(__FILE__) . "/debug.txt");
 
 $hideLoginStatus=true;
 $hideSearchForm=true;
