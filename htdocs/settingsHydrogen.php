@@ -28,7 +28,7 @@ require_once 'settingsPasswords.php';
 
 define ("DATAFILE_PATH",dirname(__FILE__));
 define ("WEBROOT",dirname(__FILE__));
-define ("DEBUG",true);
+$settings["DEBUG"]=true;
 define ("DEBUG_PATH",dirname(__FILE__) . "/debug.txt");
 
 $hideLoginStatus=true;
