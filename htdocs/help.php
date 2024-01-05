@@ -122,6 +122,8 @@ sqlplus.exe /nolog @conn %url%</p>
 
 </div>
 <!-- END MAIN -->
-
-<?php include "Hydrogen/elemFooter.php"; ?>
+<?php
+	include 'Hydrogen/elemNavbar.php';
+	include "Hydrogen/elemFooter.php";
+?>
 </body></html>
