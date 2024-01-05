@@ -114,7 +114,9 @@ if ($page_count>0) {
 </p></div>
 <!-- END MAIN -->
 </div>
-
-<?php include "Hydrogen/elemFooter.php"; ?>
+<?php
+	include 'Hydrogen/elemNavbar.php';
+	include "Hydrogen/elemFooter.php";
+?>
 </body></html>
 
